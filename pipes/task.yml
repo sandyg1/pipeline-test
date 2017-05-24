@@ -26,4 +26,4 @@ params:
   KEY:
 
 run:
-  path: pipeline-test/pipes/task.sh
+  path: pipes/task.sh
