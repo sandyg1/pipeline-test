@@ -29,4 +29,4 @@ params:
   KEY:
 
 run:
-  path: my-pipeline/pipes/task.sh
+  path: my-pipeline/pipes/task1.sh
