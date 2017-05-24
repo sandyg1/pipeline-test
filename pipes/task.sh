@@ -52,4 +52,4 @@ sshpass -e scp -o StrictHostKeyChecking=no /tmp/test.crt ubuntu@${OPSMAN_IP}:/ho
 sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /home/ubuntu/tempest1.key /var/tempest/cert/tempest.key
 sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /home/ubuntu/tempest1.crt /var/tempest/cert/tempest.crt
 
-sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} ls -ltrh /var/tempest/cert
+sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo service nginx restart
