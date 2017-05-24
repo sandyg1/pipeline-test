@@ -12,7 +12,7 @@ jobs:
   plan:
   - aggregate:
     - get: my-pipeline
-  - task: SSH-and-SCP
+  - task: do-stuff
     file: my-pipeline/pipes/task.yml
     params:
       OPSMAN_IP: {{opsman_ip}}
