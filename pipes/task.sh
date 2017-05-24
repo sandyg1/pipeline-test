@@ -27,7 +27,7 @@
 
  echo -e $CERT
 
- echo $KEY > /tmp/test.key
+ echo $CERT > /tmp/test.key
  echo "CAT"
 
  cat /tmp/test.key
