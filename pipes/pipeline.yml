@@ -11,7 +11,7 @@ jobs:
 - name: test-ssh
   plan:
   - aggregate:
-    - get: test1
+    - get: pipeline-test
   - task: SSH-and-SCP
     file: pipeline-test/pipes/task.yml
     params:
