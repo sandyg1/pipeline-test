@@ -35,7 +35,8 @@
  echo ""
  for i in "${KEY[@]}"
 do
-	echo $i >> /tmp/test1.key
+	echo $i
+  echo "next line"
 done
 
 echo "CAT test1.key"
