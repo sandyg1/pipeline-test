@@ -31,6 +31,16 @@
  echo "CAT"
 
  cat /tmp/test.key
+ echo ""
+ echo ""
+ for i in "${KEY[@]}"
+do
+	echo $i >> /tmp/test1.key
+done
+
+echo "CAT test1.key"
+
+cat /tmp/test1.key
 
 
  sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /var/tempest/cert/tempest.crt /var/tempest/cert/tempest.crt.old
