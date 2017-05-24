@@ -20,14 +20,14 @@
  sudo apt-get install sshpass
 
  echo "Updating routes on opsman"
- echo $CERT
+ #echo $CERT
 
  echo ""
  echo ""
 
  echo -e $CERT
 
- echo $CERT > /tmp/test.key
+ echo -e $CERT > /tmp/test.key
  echo "CAT"
 
  cat /tmp/test.key
