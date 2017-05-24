@@ -26,7 +26,7 @@
  sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /var/tempest/cert/tempest.crt /var/tempest/cert/tempest.crt.old
  sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /var/tempest/cert/tempest.key /var/tempest/cert/tempest.key.old
 
- sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "sudo echo $KEY > /var/tempest/cert/tempest1.key"
- sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "sudo echo $CRT > /var/tempest/cert/tempest1.crt"
+ sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "sudo echo -e $KEY > /var/tempest/cert/tempest1.key"
+ sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "sudo echo -e $CRT > /var/tempest/cert/tempest1.crt"
 
 sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} ls -ltrh /var/tempest/cert
