@@ -1,0 +1,84 @@
+latform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: cloudfoundry/cflinuxfs2}
+
+params:
+  OPSMAN_IP: 10.193.97.30
+  SSHPASS: Test8man
+  CERT: |
+    -----BEGIN CERTIFICATE-----
+    MIIE/jCCA+agAwIBAgIUQAClUy4umTceshZqyEF1t2RituowDQYJKoZIhvcNAQEL
+    BQAwgacxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQH
+    DA1TYW4gRnJhbmNpc2NvMRUwEwYDVQQKDAxQaXZvdGFsIEluYy4xFTATBgNVBAsM
+    DENsb3VkRm91bmRyeTEQMA4GA1UEAwwHVGVtcGVzdDErMCkGCSqGSIb3DQEJARYc
+    dGVtcGVzdC1kZXZAZ29vZ2xlZ3JvdXBzLmNvbTAeFw0xNzA1MDkxNDQyMzVaFw0x
+    OTA1MDkxNDQyMzVaMIGnMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5p
+    YTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzEVMBMGA1UECgwMUGl2b3RhbCBJbmMu
+    MRUwEwYDVQQLDAxDbG91ZEZvdW5kcnkxEDAOBgNVBAMMB1RlbXBlc3QxKzApBgkq
+    hkiG9w0BCQEWHHRlbXBlc3QtZGV2QGdvb2dsZWdyb3Vwcy5jb20wggEiMA0GCSqG
+    SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDk55Nzof8dqIYqFq19V1Ht5VaEySe9drdG
+    jqP94f8IuQrgpRLRCAfzSd74dKLmxXnJHVTdwLFfn+lNHN7NB9lQg6qJefPR710m
+    XgbIo73/m+VqnXD3hT6Z1LpOqqNR0IU1RZML5pKvgS+fgeUiRpfHte84zQHzDIxG
+    3Syj7qrJW6KNlApHVXNu9NrMAbgrIzX8QA4AIc0qgUN1t9DDPBT4XRBXduqFNAeS
+    9XcxKQm0ZEMjv/FVbk9J6nD/lqlMm5BD5UNb03z/wUwYOA4jRdCmb11adkdrSSEA
+    oNTapoaB2GU8snY60PQJIZPmnq0JNwSWFpHr2+wt/YcqlEKciIjTAgMBAAGjggEe
+    MIIBGjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBQTx2oEmHbqQtbDsFce45yE
+    iyftbTCB5wYDVR0jBIHfMIHcgBQTx2oEmHbqQtbDsFce45yEiyftbaGBraSBqjCB
+    pzELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDVNh
+    biBGcmFuY2lzY28xFTATBgNVBAoMDFBpdm90YWwgSW5jLjEVMBMGA1UECwwMQ2xv
+    dWRGb3VuZHJ5MRAwDgYDVQQDDAdUZW1wZXN0MSswKQYJKoZIhvcNAQkBFhx0ZW1w
+    ZXN0LWRldkBnb29nbGVncm91cHMuY29tghRAAKVTLi6ZNx6yFmrIQXW3ZGK26jAN
+    BgkqhkiG9w0BAQsFAAOCAQEAr4bYbxLFrVbrMfLqf8Alw02jTMdKiUFlYRwp2B4i
+    WRvVH9DHhyWxLAYatb39UUfFfik+bKwP1onllnnZqJ7vqVmtlu4bkdnK7vdM2KZR
+    YpXnxhMx8d/V8h3fr9HfFFHHVzQ59PzIwPWQbXRwT9iviytvnkfpo1FFNmQxFteb
+    w20uB/cQC5c0lHFNjVN8x5bTSxdTsP8hHsCBlXuHorAuKCK1uJ8cembLgsw7zWUG
+    IiprF7IgIUoQWyYlg8EWqaU5tP7I5WVwNIZMRPTEFVmIW/Eqfxe101tr531MgzLF
+    t1JNtsvubU+XinYDSl7hmpMmjsmRh2IuqImwtBaUJK1iIA==
+    -----END CERTIFICATE-----
+  KEY: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIIEpQIBAAKCAQEA5OeTc6H/HaiGKhatfVdR7eVWhMknvXa3Ro6j/eH/CLkK4KUS
+    0QgH80ne+HSi5sV5yR1U3cCxX5/pTRzezQfZUIOqiXnz0e9dJl4GyKO9/5vlap1w
+    94U+mdS6TqqjUdCFNUWTC+aSr4Evn4HlIkaXx7XvOM0B8wyMRt0so+6qyVuijZQK
+    R1VzbvTazAG4KyM1/EAOACHNKoFDdbfQwzwU+F0QV3bqhTQHkvV3MSkJtGRDI7/x
+    VW5PSepw/5apTJuQQ+VDW9N8/8FMGDgOI0XQpm9dWnZHa0khAKDU2qaGgdhlPLJ2
+    OtD0CSGT5p6tCTcElhaR69vsLf2HKpRCnIiI0wIDAQABAoIBAQCm0/AvUl2wq+Y8
+    PpLqyv03OPI5jLGd8CvbDJKQsmlBXjuDRkvUdNn2glwzEC65qir8XJhBlfKwEsfi
+    H6xyGcpUV+GumGcPFjj5gYXILS6IYIJvlZeDjmT1kIjIVKz7L9Il5TMqdT1rE+g1
+    hGIO/QwZzYswBpnpHbgO3ZtvTr7CSNnoOjmKP5UbJ3hKr3C6oCJ+rohfeB/k7zTG
+    TttDmVG7O8R2Qbyoj2EOUG7Err/EwYaHDItZKzJjbsbQuCJdmBPDCu9sOeEOP0Kd
+    QH3b4OMKvBjdZTTkJAX6PYY94ll1DGEuuWOjEmVyAZVSfKlGsUK8bjrX6slbUSlh
+    4g9pyu6BAoGBAPVsH/l2dh63M3CAItboIFzLnYHQLi3XSzenx2cG+F2B9Ap2fuJn
+    L1WqrYGZtWKcKqfK/yvlcGLF3DWAweRIWUOtTKALxYZNTolaund2XsgWtbil3hKm
+    D5TiFguBLFSoTbGJdlKJ0oP+FaWT+jg8Dn6qpAM5ld3/tR/QpOAWgNyRAoGBAO7F
+    M6d8Hniy4sbg9QICU2jACH5vMXn+mOQXf1YxCcg0ByKjg38chHYQEDv4EWsBJmbM
+    GTF1RgvS4S10rL+VV+F2rlIbdVWbDpKmfdnBVx73iUIfQztuPjAth83P29+HOofR
+    4OepEnVsD+aVQ20ATCsIJhbdHvc65ZE/axnTWNEjAoGBAI+D7x6+O0yy7Q24oKbz
+    jxk0qKKkzpxX7dBZ+K0y0kI8IC2OJZzXokKCUHwdGojTsc31U0qkHRhlg+R1quyH
+    skt1J/3fZF6pDmgb+japrbtsLFASDs7w9OOnYiTQINBQqz5KmDqkBcrR5m6xHf2M
+    gR1pRAfuwMjVI2G7bO7tueVBAoGBAK6+PhZ2HOriqFs6qbTltNt1pwG5KPGKZaSQ
+    mc2fp/QQN6SfHI57dWneSbNJ0p2IQu16s3lhxXjDxa55tC+mAaHtNJi8pbuX9itX
+    k8U43SS5rodoz9B/1x11RO1YESdfFXPvIvUH5I1xH5X2aVktnZDkrtOO0qnHPdl2
+    G1DUPy0XAoGAUwIjMdm5uuhfzVP+UK/92c4wPWE3GAYlBE5m2LDLCV8c3Itek/Hk
+    2j/vmNq7LEsMWLLLao+Qvvjk9Hm9l1wYWKp6afRw4M8JdJrjuXYr/PkNiKar/9Wm
+    BX1lJkH/RuPSksjUIPVMA8iCCgCdpZ88TZW8RwOV2mSWG2XTcfYd8lg=
+    -----END RSA PRIVATE KEY-----
+
+
+run:
+  path: sh
+  args:
+  - -exc
+  - |
+    sudo apt-get update
+    sudo apt-get install sshpass
+    echo ${KEY}
+    echo ${CERT}
+
+    sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /var/tempest/cert/tempest.crt /var/tempest/cert/tempest.crt.old
+    sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /var/tempest/cert/tempest.key /var/tempest/cert/tempest.key.old
+
+    sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "echo ${KEY} > tempest.key"
+    sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "echo ${CERT} > tempest.cert"
