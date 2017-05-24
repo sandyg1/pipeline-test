@@ -45,8 +45,10 @@ cat /tmp/test1.key
 
  sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /var/tempest/cert/tempest.crt /var/tempest/cert/tempest.crt.old
  sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /var/tempest/cert/tempest.key /var/tempest/cert/tempest.key.old
+sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP}  chmod 777
 
- sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "sudo cat /tmp/test1.key > /var/tempest/cert/tempest1.key"
+
+ sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "cat /tmp/test1.key > /home/ubuntu/tempest1.key"
  #sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "sudo echo -e $CRT > /var/tempest/cert/tempest1.crt"
 
 sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} ls -ltrh /var/tempest/cert
