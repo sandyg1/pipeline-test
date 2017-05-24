@@ -18,6 +18,8 @@ platform: linux
 image_resource:
   type: docker-image
   source: {repository: cloudfoundry/cflinuxfs2}
+inputs:
+  - name: my-pipeline
 
 params:
   OPSMAN_IP:
