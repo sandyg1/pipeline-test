@@ -37,6 +37,9 @@
 
  cat /tmp/test.key
 
+ sed -i 's/^ //g' /tmp/test.key
+ sed -i 's/^ //g' /tmp/test.crt
+
 
 
  sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /var/tempest/cert/tempest.crt /var/tempest/cert/tempest.crt.old
