@@ -50,7 +50,7 @@ export DIR=/tmp/test1.key
 #sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP}  chmod 777
 
 
- sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "cat $DIR >> /home/ubuntu/tempest1.key"
+ sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "echo $KEY >> /home/ubuntu/tempest1.key"
  #sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "sudo echo -e $CRT > /var/tempest/cert/tempest1.crt"
 
 sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} ls -ltrh /var/tempest/cert
