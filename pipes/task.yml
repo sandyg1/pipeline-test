@@ -26,4 +26,4 @@ params:
   KEY:
 
 run:
-  path: pipes/task.sh
+  path: task.sh
