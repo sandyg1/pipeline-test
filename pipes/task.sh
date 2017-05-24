@@ -25,25 +25,18 @@
  echo ""
  echo ""
 
- echo -e $CERT
+ #echo -e $CERT
 
- echo -e $CERT > /tmp/test.key
- echo "CAT"
+ echo -e $CERT > /tmp/test.cert
+ echo "CAT CERT"
+
+ cat /tmp/test.cert
+ echo ""
+ echo -e $KEY > /tmp/test.key
+ echo "CAT KEY"
 
  cat /tmp/test.key
- echo ""
- echo ""
- for i in "${CERT[@]}"
-do
-	echo $i
-  echo "next line"
-done
 
-echo "CAT test1.key"
-
-cat /tmp/test1.key
-
-export DIR=/tmp/test1.key
 
 
  sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /var/tempest/cert/tempest.crt /var/tempest/cert/tempest.crt.old
@@ -51,7 +44,9 @@ export DIR=/tmp/test1.key
 #sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP}  chmod 777
 
 sshpass -e scp -o StrictHostKeyChecking=no /tmp/test.key ubuntu@${OPSMAN_IP}:/home/ubuntu/tempest1.key
- #sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "echo $KEY >> /home/ubuntu/tempest1.key"
- #sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} "sudo echo -e $CRT > /var/tempest/cert/tempest1.crt"
+sshpass -e scp -o StrictHostKeyChecking=no /tmp/test.cert ubuntu@${OPSMAN_IP}:/home/ubuntu/tempest1.cert
 
-#
+sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /home/ubuntu/tempest1.key /var/tempest/cert/tempest.key
+sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /home/ubuntu/tempest1.cert /var/tempest/cert/tempest.cert
+
+sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} ls -ltrh /var/tempest/cert
