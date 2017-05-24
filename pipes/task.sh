@@ -20,7 +20,17 @@
  sudo apt-get install sshpass
 
  echo "Updating routes on opsman"
+ echo $KEY
 
+ echo ""
+ echo ""
+
+ echo -e $KEY
+
+ echo $KEY > /tmp/test.key
+ echo "CAT"
+
+ cat /tmp/test.key
 
 
  sshpass -e ssh -o StrictHostKeyChecking=no ubuntu@${OPSMAN_IP} sudo cp /var/tempest/cert/tempest.crt /var/tempest/cert/tempest.crt.old
